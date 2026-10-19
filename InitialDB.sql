@@ -225,59 +225,10 @@ SET DEFINE OFF;
 REM INSERTING into LUBRICAR.VEHICULO
 SET DEFINE OFF;
 --------------------------------------------------------
---  DDL for Index PK_CLIENTE
+--  DDL for Index PK_SERVICIO
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "LUBRICAR"."PK_CLIENTE" ON "LUBRICAR"."CLIENTE" ("ID_CLIENTE") 
-  PCTFREE 10 INITRANS 20 MAXTRANS 255 
-  TABLESPACE "DATA" ;
---------------------------------------------------------
---  DDL for Index PK_DETALLE_REPUESTO
---------------------------------------------------------
-
-  CREATE UNIQUE INDEX "LUBRICAR"."PK_DETALLE_REPUESTO" ON "LUBRICAR"."DETALLE_REPUESTO" ("ID_DETALLE_REPUESTO") 
-  PCTFREE 10 INITRANS 20 MAXTRANS 255 
-  TABLESPACE "DATA" ;
---------------------------------------------------------
---  DDL for Index PK_DETALLE_SERVICIO
---------------------------------------------------------
-
-  CREATE UNIQUE INDEX "LUBRICAR"."PK_DETALLE_SERVICIO" ON "LUBRICAR"."DETALLE_SERVICIO" ("ID_DETALLE_SERVICIO") 
-  PCTFREE 10 INITRANS 20 MAXTRANS 255 
-  TABLESPACE "DATA" ;
---------------------------------------------------------
---  DDL for Index PK_EMPLEADO
---------------------------------------------------------
-
-  CREATE UNIQUE INDEX "LUBRICAR"."PK_EMPLEADO" ON "LUBRICAR"."EMPLEADO" ("ID_EMPLEADO") 
-  PCTFREE 10 INITRANS 20 MAXTRANS 255 
-  TABLESPACE "DATA" ;
---------------------------------------------------------
---  DDL for Index PK_FACTURA
---------------------------------------------------------
-
-  CREATE UNIQUE INDEX "LUBRICAR"."PK_FACTURA" ON "LUBRICAR"."FACTURA" ("ID_FACTURA") 
-  PCTFREE 10 INITRANS 20 MAXTRANS 255 
-  TABLESPACE "DATA" ;
---------------------------------------------------------
---  DDL for Index PK_MOVIMIENTO
---------------------------------------------------------
-
-  CREATE UNIQUE INDEX "LUBRICAR"."PK_MOVIMIENTO" ON "LUBRICAR"."MOVIMIENTO_INVENTARIO" ("ID_MOVIMIENTO") 
-  PCTFREE 10 INITRANS 20 MAXTRANS 255 
-  TABLESPACE "DATA" ;
---------------------------------------------------------
---  DDL for Index PK_ORDEN_SERVICIO
---------------------------------------------------------
-
-  CREATE UNIQUE INDEX "LUBRICAR"."PK_ORDEN_SERVICIO" ON "LUBRICAR"."ORDEN_SERVICIO" ("ID_ORDEN") 
-  PCTFREE 10 INITRANS 20 MAXTRANS 255 
-  TABLESPACE "DATA" ;
---------------------------------------------------------
---  DDL for Index PK_PAGO
---------------------------------------------------------
-
-  CREATE UNIQUE INDEX "LUBRICAR"."PK_PAGO" ON "LUBRICAR"."PAGO" ("ID_PAGO") 
+  CREATE UNIQUE INDEX "LUBRICAR"."PK_SERVICIO" ON "LUBRICAR"."SERVICIO" ("ID_SERVICIO") 
   PCTFREE 10 INITRANS 20 MAXTRANS 255 
   TABLESPACE "DATA" ;
 --------------------------------------------------------
@@ -288,87 +239,10 @@ SET DEFINE OFF;
   PCTFREE 10 INITRANS 20 MAXTRANS 255 
   TABLESPACE "DATA" ;
 --------------------------------------------------------
---  DDL for Index PK_REPUESTO
+--  DDL for Index IDX_REPUESTO_PROVEEDOR
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "LUBRICAR"."PK_REPUESTO" ON "LUBRICAR"."REPUESTO" ("ID_REPUESTO") 
-  PCTFREE 10 INITRANS 20 MAXTRANS 255 
-  TABLESPACE "DATA" ;
---------------------------------------------------------
---  DDL for Index PK_SERVICIO
---------------------------------------------------------
-
-  CREATE UNIQUE INDEX "LUBRICAR"."PK_SERVICIO" ON "LUBRICAR"."SERVICIO" ("ID_SERVICIO") 
-  PCTFREE 10 INITRANS 20 MAXTRANS 255 
-  TABLESPACE "DATA" ;
---------------------------------------------------------
---  DDL for Index PK_VEHICULO
---------------------------------------------------------
-
-  CREATE UNIQUE INDEX "LUBRICAR"."PK_VEHICULO" ON "LUBRICAR"."VEHICULO" ("ID_VEHICULO") 
-  PCTFREE 10 INITRANS 20 MAXTRANS 255 
-  TABLESPACE "DATA" ;
---------------------------------------------------------
---  DDL for Index UQ_CLIENTE_CEDULA
---------------------------------------------------------
-
-  CREATE UNIQUE INDEX "LUBRICAR"."UQ_CLIENTE_CEDULA" ON "LUBRICAR"."CLIENTE" ("CEDULA") 
-  PCTFREE 10 INITRANS 20 MAXTRANS 255 
-  TABLESPACE "DATA" ;
---------------------------------------------------------
---  DDL for Index UQ_EMPLEADO_CEDULA
---------------------------------------------------------
-
-  CREATE UNIQUE INDEX "LUBRICAR"."UQ_EMPLEADO_CEDULA" ON "LUBRICAR"."EMPLEADO" ("CEDULA") 
-  PCTFREE 10 INITRANS 20 MAXTRANS 255 
-  TABLESPACE "DATA" ;
---------------------------------------------------------
---  DDL for Index UQ_FACTURA_ORDEN
---------------------------------------------------------
-
-  CREATE UNIQUE INDEX "LUBRICAR"."UQ_FACTURA_ORDEN" ON "LUBRICAR"."FACTURA" ("ID_ORDEN") 
-  PCTFREE 10 INITRANS 20 MAXTRANS 255 
-  TABLESPACE "DATA" ;
---------------------------------------------------------
---  DDL for Index UQ_PROVEEDOR_CEDULA
---------------------------------------------------------
-
-  CREATE UNIQUE INDEX "LUBRICAR"."UQ_PROVEEDOR_CEDULA" ON "LUBRICAR"."PROVEEDOR" ("CEDULA_JURIDICA") 
-  PCTFREE 10 INITRANS 20 MAXTRANS 255 
-  TABLESPACE "DATA" ;
---------------------------------------------------------
---  DDL for Index UQ_VEHICULO_PLACA
---------------------------------------------------------
-
-  CREATE UNIQUE INDEX "LUBRICAR"."UQ_VEHICULO_PLACA" ON "LUBRICAR"."VEHICULO" ("PLACA") 
-  PCTFREE 10 INITRANS 20 MAXTRANS 255 
-  TABLESPACE "DATA" ;
---------------------------------------------------------
---  DDL for Index UQ_CLIENTE_CEDULA
---------------------------------------------------------
-
-  CREATE UNIQUE INDEX "LUBRICAR"."UQ_CLIENTE_CEDULA" ON "LUBRICAR"."CLIENTE" ("CEDULA") 
-  PCTFREE 10 INITRANS 20 MAXTRANS 255 
-  TABLESPACE "DATA" ;
---------------------------------------------------------
---  DDL for Index PK_CLIENTE
---------------------------------------------------------
-
-  CREATE UNIQUE INDEX "LUBRICAR"."PK_CLIENTE" ON "LUBRICAR"."CLIENTE" ("ID_CLIENTE") 
-  PCTFREE 10 INITRANS 20 MAXTRANS 255 
-  TABLESPACE "DATA" ;
---------------------------------------------------------
---  DDL for Index PK_DETALLE_REPUESTO
---------------------------------------------------------
-
-  CREATE UNIQUE INDEX "LUBRICAR"."PK_DETALLE_REPUESTO" ON "LUBRICAR"."DETALLE_REPUESTO" ("ID_DETALLE_REPUESTO") 
-  PCTFREE 10 INITRANS 20 MAXTRANS 255 
-  TABLESPACE "DATA" ;
---------------------------------------------------------
---  DDL for Index PK_DETALLE_SERVICIO
---------------------------------------------------------
-
-  CREATE UNIQUE INDEX "LUBRICAR"."PK_DETALLE_SERVICIO" ON "LUBRICAR"."DETALLE_SERVICIO" ("ID_DETALLE_SERVICIO") 
+  CREATE INDEX "LUBRICAR"."IDX_REPUESTO_PROVEEDOR" ON "LUBRICAR"."REPUESTO" ("ID_PROVEEDOR") 
   PCTFREE 10 INITRANS 20 MAXTRANS 255 
   TABLESPACE "DATA" ;
 --------------------------------------------------------
@@ -386,24 +260,17 @@ SET DEFINE OFF;
   PCTFREE 10 INITRANS 20 MAXTRANS 255 
   TABLESPACE "DATA" ;
 --------------------------------------------------------
---  DDL for Index PK_FACTURA
+--  DDL for Index PK_REPUESTO
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "LUBRICAR"."PK_FACTURA" ON "LUBRICAR"."FACTURA" ("ID_FACTURA") 
+  CREATE UNIQUE INDEX "LUBRICAR"."PK_REPUESTO" ON "LUBRICAR"."REPUESTO" ("ID_REPUESTO") 
   PCTFREE 10 INITRANS 20 MAXTRANS 255 
   TABLESPACE "DATA" ;
 --------------------------------------------------------
---  DDL for Index UQ_FACTURA_ORDEN
+--  DDL for Index IDX_DETSERV_SERVICIO
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "LUBRICAR"."UQ_FACTURA_ORDEN" ON "LUBRICAR"."FACTURA" ("ID_ORDEN") 
-  PCTFREE 10 INITRANS 20 MAXTRANS 255 
-  TABLESPACE "DATA" ;
---------------------------------------------------------
---  DDL for Index PK_MOVIMIENTO
---------------------------------------------------------
-
-  CREATE UNIQUE INDEX "LUBRICAR"."PK_MOVIMIENTO" ON "LUBRICAR"."MOVIMIENTO_INVENTARIO" ("ID_MOVIMIENTO") 
+  CREATE INDEX "LUBRICAR"."IDX_DETSERV_SERVICIO" ON "LUBRICAR"."DETALLE_SERVICIO" ("ID_SERVICIO") 
   PCTFREE 10 INITRANS 20 MAXTRANS 255 
   TABLESPACE "DATA" ;
 --------------------------------------------------------
@@ -421,10 +288,87 @@ SET DEFINE OFF;
   PCTFREE 10 INITRANS 20 MAXTRANS 255 
   TABLESPACE "DATA" ;
 --------------------------------------------------------
---  DDL for Index PK_PROVEEDOR
+--  DDL for Index PK_VEHICULO
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "LUBRICAR"."PK_PROVEEDOR" ON "LUBRICAR"."PROVEEDOR" ("ID_PROVEEDOR") 
+  CREATE UNIQUE INDEX "LUBRICAR"."PK_VEHICULO" ON "LUBRICAR"."VEHICULO" ("ID_VEHICULO") 
+  PCTFREE 10 INITRANS 20 MAXTRANS 255 
+  TABLESPACE "DATA" ;
+--------------------------------------------------------
+--  DDL for Index IDX_DETREP_ORDEN
+--------------------------------------------------------
+
+  CREATE INDEX "LUBRICAR"."IDX_DETREP_ORDEN" ON "LUBRICAR"."DETALLE_REPUESTO" ("ID_ORDEN") 
+  PCTFREE 10 INITRANS 20 MAXTRANS 255 
+  TABLESPACE "DATA" ;
+--------------------------------------------------------
+--  DDL for Index IDX_PAGO_FACTURA
+--------------------------------------------------------
+
+  CREATE INDEX "LUBRICAR"."IDX_PAGO_FACTURA" ON "LUBRICAR"."PAGO" ("ID_FACTURA") 
+  PCTFREE 10 INITRANS 20 MAXTRANS 255 
+  TABLESPACE "DATA" ;
+--------------------------------------------------------
+--  DDL for Index PK_MOVIMIENTO
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "LUBRICAR"."PK_MOVIMIENTO" ON "LUBRICAR"."MOVIMIENTO_INVENTARIO" ("ID_MOVIMIENTO") 
+  PCTFREE 10 INITRANS 20 MAXTRANS 255 
+  TABLESPACE "DATA" ;
+--------------------------------------------------------
+--  DDL for Index IDX_DETSERV_ORDEN
+--------------------------------------------------------
+
+  CREATE INDEX "LUBRICAR"."IDX_DETSERV_ORDEN" ON "LUBRICAR"."DETALLE_SERVICIO" ("ID_ORDEN") 
+  PCTFREE 10 INITRANS 20 MAXTRANS 255 
+  TABLESPACE "DATA" ;
+--------------------------------------------------------
+--  DDL for Index UQ_VEHICULO_PLACA
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "LUBRICAR"."UQ_VEHICULO_PLACA" ON "LUBRICAR"."VEHICULO" ("PLACA") 
+  PCTFREE 10 INITRANS 20 MAXTRANS 255 
+  TABLESPACE "DATA" ;
+--------------------------------------------------------
+--  DDL for Index IDX_DETREP_REPUESTO
+--------------------------------------------------------
+
+  CREATE INDEX "LUBRICAR"."IDX_DETREP_REPUESTO" ON "LUBRICAR"."DETALLE_REPUESTO" ("ID_REPUESTO") 
+  PCTFREE 10 INITRANS 20 MAXTRANS 255 
+  TABLESPACE "DATA" ;
+--------------------------------------------------------
+--  DDL for Index IDX_VEHICULO_CLIENTE
+--------------------------------------------------------
+
+  CREATE INDEX "LUBRICAR"."IDX_VEHICULO_CLIENTE" ON "LUBRICAR"."VEHICULO" ("ID_CLIENTE") 
+  PCTFREE 10 INITRANS 20 MAXTRANS 255 
+  TABLESPACE "DATA" ;
+--------------------------------------------------------
+--  DDL for Index PK_CLIENTE
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "LUBRICAR"."PK_CLIENTE" ON "LUBRICAR"."CLIENTE" ("ID_CLIENTE") 
+  PCTFREE 10 INITRANS 20 MAXTRANS 255 
+  TABLESPACE "DATA" ;
+--------------------------------------------------------
+--  DDL for Index PK_DETALLE_SERVICIO
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "LUBRICAR"."PK_DETALLE_SERVICIO" ON "LUBRICAR"."DETALLE_SERVICIO" ("ID_DETALLE_SERVICIO") 
+  PCTFREE 10 INITRANS 20 MAXTRANS 255 
+  TABLESPACE "DATA" ;
+--------------------------------------------------------
+--  DDL for Index IDX_ORDEN_EMPLEADO
+--------------------------------------------------------
+
+  CREATE INDEX "LUBRICAR"."IDX_ORDEN_EMPLEADO" ON "LUBRICAR"."ORDEN_SERVICIO" ("ID_EMPLEADO") 
+  PCTFREE 10 INITRANS 20 MAXTRANS 255 
+  TABLESPACE "DATA" ;
+--------------------------------------------------------
+--  DDL for Index UQ_CLIENTE_CEDULA
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "LUBRICAR"."UQ_CLIENTE_CEDULA" ON "LUBRICAR"."CLIENTE" ("CEDULA") 
   PCTFREE 10 INITRANS 20 MAXTRANS 255 
   TABLESPACE "DATA" ;
 --------------------------------------------------------
@@ -435,33 +379,74 @@ SET DEFINE OFF;
   PCTFREE 10 INITRANS 20 MAXTRANS 255 
   TABLESPACE "DATA" ;
 --------------------------------------------------------
---  DDL for Index PK_REPUESTO
+--  DDL for Index IDX_ORDEN_VEHICULO
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "LUBRICAR"."PK_REPUESTO" ON "LUBRICAR"."REPUESTO" ("ID_REPUESTO") 
+  CREATE INDEX "LUBRICAR"."IDX_ORDEN_VEHICULO" ON "LUBRICAR"."ORDEN_SERVICIO" ("ID_VEHICULO") 
   PCTFREE 10 INITRANS 20 MAXTRANS 255 
   TABLESPACE "DATA" ;
 --------------------------------------------------------
---  DDL for Index PK_SERVICIO
+--  DDL for Index PK_FACTURA
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "LUBRICAR"."PK_SERVICIO" ON "LUBRICAR"."SERVICIO" ("ID_SERVICIO") 
+  CREATE UNIQUE INDEX "LUBRICAR"."PK_FACTURA" ON "LUBRICAR"."FACTURA" ("ID_FACTURA") 
   PCTFREE 10 INITRANS 20 MAXTRANS 255 
   TABLESPACE "DATA" ;
 --------------------------------------------------------
---  DDL for Index PK_VEHICULO
+--  DDL for Index IDX_MOVINV_REPUESTO
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "LUBRICAR"."PK_VEHICULO" ON "LUBRICAR"."VEHICULO" ("ID_VEHICULO") 
+  CREATE INDEX "LUBRICAR"."IDX_MOVINV_REPUESTO" ON "LUBRICAR"."MOVIMIENTO_INVENTARIO" ("ID_REPUESTO") 
   PCTFREE 10 INITRANS 20 MAXTRANS 255 
   TABLESPACE "DATA" ;
 --------------------------------------------------------
---  DDL for Index UQ_VEHICULO_PLACA
+--  DDL for Index PK_DETALLE_REPUESTO
 --------------------------------------------------------
 
-  CREATE UNIQUE INDEX "LUBRICAR"."UQ_VEHICULO_PLACA" ON "LUBRICAR"."VEHICULO" ("PLACA") 
+  CREATE UNIQUE INDEX "LUBRICAR"."PK_DETALLE_REPUESTO" ON "LUBRICAR"."DETALLE_REPUESTO" ("ID_DETALLE_REPUESTO") 
   PCTFREE 10 INITRANS 20 MAXTRANS 255 
   TABLESPACE "DATA" ;
+--------------------------------------------------------
+--  DDL for Index UQ_FACTURA_ORDEN
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "LUBRICAR"."UQ_FACTURA_ORDEN" ON "LUBRICAR"."FACTURA" ("ID_ORDEN") 
+  PCTFREE 10 INITRANS 20 MAXTRANS 255 
+  TABLESPACE "DATA" ;
+--------------------------------------------------------
+--  Constraints for Table ORDEN_SERVICIO
+--------------------------------------------------------
+
+  ALTER TABLE "LUBRICAR"."ORDEN_SERVICIO" ADD CONSTRAINT "PK_ORDEN_SERVICIO" PRIMARY KEY ("ID_ORDEN")
+  USING INDEX PCTFREE 10 INITRANS 20 MAXTRANS 255 
+  TABLESPACE "DATA"  ENABLE;
+--------------------------------------------------------
+--  Constraints for Table DETALLE_SERVICIO
+--------------------------------------------------------
+
+  ALTER TABLE "LUBRICAR"."DETALLE_SERVICIO" MODIFY ("CANTIDAD" NOT NULL ENABLE);
+  ALTER TABLE "LUBRICAR"."DETALLE_SERVICIO" MODIFY ("PRECIO_UNITARIO" NOT NULL ENABLE);
+  ALTER TABLE "LUBRICAR"."DETALLE_SERVICIO" ADD CONSTRAINT "PK_DETALLE_SERVICIO" PRIMARY KEY ("ID_DETALLE_SERVICIO")
+  USING INDEX PCTFREE 10 INITRANS 20 MAXTRANS 255 
+  TABLESPACE "DATA"  ENABLE;
+--------------------------------------------------------
+--  Constraints for Table PAGO
+--------------------------------------------------------
+
+  ALTER TABLE "LUBRICAR"."PAGO" MODIFY ("MONTO" NOT NULL ENABLE);
+  ALTER TABLE "LUBRICAR"."PAGO" MODIFY ("METODO_PAGO" NOT NULL ENABLE);
+  ALTER TABLE "LUBRICAR"."PAGO" ADD CONSTRAINT "PK_PAGO" PRIMARY KEY ("ID_PAGO")
+  USING INDEX PCTFREE 10 INITRANS 20 MAXTRANS 255 
+  TABLESPACE "DATA"  ENABLE;
+--------------------------------------------------------
+--  Constraints for Table DETALLE_REPUESTO
+--------------------------------------------------------
+
+  ALTER TABLE "LUBRICAR"."DETALLE_REPUESTO" MODIFY ("CANTIDAD" NOT NULL ENABLE);
+  ALTER TABLE "LUBRICAR"."DETALLE_REPUESTO" MODIFY ("PRECIO_UNITARIO" NOT NULL ENABLE);
+  ALTER TABLE "LUBRICAR"."DETALLE_REPUESTO" ADD CONSTRAINT "PK_DETALLE_REPUESTO" PRIMARY KEY ("ID_DETALLE_REPUESTO")
+  USING INDEX PCTFREE 10 INITRANS 20 MAXTRANS 255 
+  TABLESPACE "DATA"  ENABLE;
 --------------------------------------------------------
 --  Constraints for Table CLIENTE
 --------------------------------------------------------
@@ -476,21 +461,39 @@ SET DEFINE OFF;
   USING INDEX PCTFREE 10 INITRANS 20 MAXTRANS 255 
   TABLESPACE "DATA"  ENABLE;
 --------------------------------------------------------
---  Constraints for Table DETALLE_REPUESTO
+--  Constraints for Table VEHICULO
 --------------------------------------------------------
 
-  ALTER TABLE "LUBRICAR"."DETALLE_REPUESTO" MODIFY ("CANTIDAD" NOT NULL ENABLE);
-  ALTER TABLE "LUBRICAR"."DETALLE_REPUESTO" MODIFY ("PRECIO_UNITARIO" NOT NULL ENABLE);
-  ALTER TABLE "LUBRICAR"."DETALLE_REPUESTO" ADD CONSTRAINT "PK_DETALLE_REPUESTO" PRIMARY KEY ("ID_DETALLE_REPUESTO")
+  ALTER TABLE "LUBRICAR"."VEHICULO" MODIFY ("PLACA" NOT NULL ENABLE);
+  ALTER TABLE "LUBRICAR"."VEHICULO" MODIFY ("MARCA" NOT NULL ENABLE);
+  ALTER TABLE "LUBRICAR"."VEHICULO" MODIFY ("MODELO" NOT NULL ENABLE);
+  ALTER TABLE "LUBRICAR"."VEHICULO" ADD CONSTRAINT "PK_VEHICULO" PRIMARY KEY ("ID_VEHICULO")
+  USING INDEX PCTFREE 10 INITRANS 20 MAXTRANS 255 
+  TABLESPACE "DATA"  ENABLE;
+  ALTER TABLE "LUBRICAR"."VEHICULO" ADD CONSTRAINT "UQ_VEHICULO_PLACA" UNIQUE ("PLACA")
   USING INDEX PCTFREE 10 INITRANS 20 MAXTRANS 255 
   TABLESPACE "DATA"  ENABLE;
 --------------------------------------------------------
---  Constraints for Table DETALLE_SERVICIO
+--  Constraints for Table PROVEEDOR
 --------------------------------------------------------
 
-  ALTER TABLE "LUBRICAR"."DETALLE_SERVICIO" MODIFY ("CANTIDAD" NOT NULL ENABLE);
-  ALTER TABLE "LUBRICAR"."DETALLE_SERVICIO" MODIFY ("PRECIO_UNITARIO" NOT NULL ENABLE);
-  ALTER TABLE "LUBRICAR"."DETALLE_SERVICIO" ADD CONSTRAINT "PK_DETALLE_SERVICIO" PRIMARY KEY ("ID_DETALLE_SERVICIO")
+  ALTER TABLE "LUBRICAR"."PROVEEDOR" MODIFY ("NOMBRE" NOT NULL ENABLE);
+  ALTER TABLE "LUBRICAR"."PROVEEDOR" ADD CONSTRAINT "PK_PROVEEDOR" PRIMARY KEY ("ID_PROVEEDOR")
+  USING INDEX PCTFREE 10 INITRANS 20 MAXTRANS 255 
+  TABLESPACE "DATA"  ENABLE;
+  ALTER TABLE "LUBRICAR"."PROVEEDOR" ADD CONSTRAINT "UQ_PROVEEDOR_CEDULA" UNIQUE ("CEDULA_JURIDICA")
+  USING INDEX PCTFREE 10 INITRANS 20 MAXTRANS 255 
+  TABLESPACE "DATA"  ENABLE;
+--------------------------------------------------------
+--  Constraints for Table FACTURA
+--------------------------------------------------------
+
+  ALTER TABLE "LUBRICAR"."FACTURA" MODIFY ("SUBTOTAL" NOT NULL ENABLE);
+  ALTER TABLE "LUBRICAR"."FACTURA" MODIFY ("TOTAL" NOT NULL ENABLE);
+  ALTER TABLE "LUBRICAR"."FACTURA" ADD CONSTRAINT "PK_FACTURA" PRIMARY KEY ("ID_FACTURA")
+  USING INDEX PCTFREE 10 INITRANS 20 MAXTRANS 255 
+  TABLESPACE "DATA"  ENABLE;
+  ALTER TABLE "LUBRICAR"."FACTURA" ADD CONSTRAINT "UQ_FACTURA_ORDEN" UNIQUE ("ID_ORDEN")
   USING INDEX PCTFREE 10 INITRANS 20 MAXTRANS 255 
   TABLESPACE "DATA"  ENABLE;
 --------------------------------------------------------
@@ -508,15 +511,12 @@ SET DEFINE OFF;
   USING INDEX PCTFREE 10 INITRANS 20 MAXTRANS 255 
   TABLESPACE "DATA"  ENABLE;
 --------------------------------------------------------
---  Constraints for Table FACTURA
+--  Constraints for Table SERVICIO
 --------------------------------------------------------
 
-  ALTER TABLE "LUBRICAR"."FACTURA" MODIFY ("SUBTOTAL" NOT NULL ENABLE);
-  ALTER TABLE "LUBRICAR"."FACTURA" MODIFY ("TOTAL" NOT NULL ENABLE);
-  ALTER TABLE "LUBRICAR"."FACTURA" ADD CONSTRAINT "PK_FACTURA" PRIMARY KEY ("ID_FACTURA")
-  USING INDEX PCTFREE 10 INITRANS 20 MAXTRANS 255 
-  TABLESPACE "DATA"  ENABLE;
-  ALTER TABLE "LUBRICAR"."FACTURA" ADD CONSTRAINT "UQ_FACTURA_ORDEN" UNIQUE ("ID_ORDEN")
+  ALTER TABLE "LUBRICAR"."SERVICIO" MODIFY ("NOMBRE" NOT NULL ENABLE);
+  ALTER TABLE "LUBRICAR"."SERVICIO" MODIFY ("PRECIO_BASE" NOT NULL ENABLE);
+  ALTER TABLE "LUBRICAR"."SERVICIO" ADD CONSTRAINT "PK_SERVICIO" PRIMARY KEY ("ID_SERVICIO")
   USING INDEX PCTFREE 10 INITRANS 20 MAXTRANS 255 
   TABLESPACE "DATA"  ENABLE;
 --------------------------------------------------------
@@ -529,33 +529,6 @@ SET DEFINE OFF;
   USING INDEX PCTFREE 10 INITRANS 20 MAXTRANS 255 
   TABLESPACE "DATA"  ENABLE;
 --------------------------------------------------------
---  Constraints for Table ORDEN_SERVICIO
---------------------------------------------------------
-
-  ALTER TABLE "LUBRICAR"."ORDEN_SERVICIO" ADD CONSTRAINT "PK_ORDEN_SERVICIO" PRIMARY KEY ("ID_ORDEN")
-  USING INDEX PCTFREE 10 INITRANS 20 MAXTRANS 255 
-  TABLESPACE "DATA"  ENABLE;
---------------------------------------------------------
---  Constraints for Table PAGO
---------------------------------------------------------
-
-  ALTER TABLE "LUBRICAR"."PAGO" MODIFY ("MONTO" NOT NULL ENABLE);
-  ALTER TABLE "LUBRICAR"."PAGO" MODIFY ("METODO_PAGO" NOT NULL ENABLE);
-  ALTER TABLE "LUBRICAR"."PAGO" ADD CONSTRAINT "PK_PAGO" PRIMARY KEY ("ID_PAGO")
-  USING INDEX PCTFREE 10 INITRANS 20 MAXTRANS 255 
-  TABLESPACE "DATA"  ENABLE;
---------------------------------------------------------
---  Constraints for Table PROVEEDOR
---------------------------------------------------------
-
-  ALTER TABLE "LUBRICAR"."PROVEEDOR" MODIFY ("NOMBRE" NOT NULL ENABLE);
-  ALTER TABLE "LUBRICAR"."PROVEEDOR" ADD CONSTRAINT "PK_PROVEEDOR" PRIMARY KEY ("ID_PROVEEDOR")
-  USING INDEX PCTFREE 10 INITRANS 20 MAXTRANS 255 
-  TABLESPACE "DATA"  ENABLE;
-  ALTER TABLE "LUBRICAR"."PROVEEDOR" ADD CONSTRAINT "UQ_PROVEEDOR_CEDULA" UNIQUE ("CEDULA_JURIDICA")
-  USING INDEX PCTFREE 10 INITRANS 20 MAXTRANS 255 
-  TABLESPACE "DATA"  ENABLE;
---------------------------------------------------------
 --  Constraints for Table REPUESTO
 --------------------------------------------------------
 
@@ -563,28 +536,6 @@ SET DEFINE OFF;
   ALTER TABLE "LUBRICAR"."REPUESTO" MODIFY ("PRECIO_COMPRA" NOT NULL ENABLE);
   ALTER TABLE "LUBRICAR"."REPUESTO" MODIFY ("PRECIO_VENTA" NOT NULL ENABLE);
   ALTER TABLE "LUBRICAR"."REPUESTO" ADD CONSTRAINT "PK_REPUESTO" PRIMARY KEY ("ID_REPUESTO")
-  USING INDEX PCTFREE 10 INITRANS 20 MAXTRANS 255 
-  TABLESPACE "DATA"  ENABLE;
---------------------------------------------------------
---  Constraints for Table SERVICIO
---------------------------------------------------------
-
-  ALTER TABLE "LUBRICAR"."SERVICIO" MODIFY ("NOMBRE" NOT NULL ENABLE);
-  ALTER TABLE "LUBRICAR"."SERVICIO" MODIFY ("PRECIO_BASE" NOT NULL ENABLE);
-  ALTER TABLE "LUBRICAR"."SERVICIO" ADD CONSTRAINT "PK_SERVICIO" PRIMARY KEY ("ID_SERVICIO")
-  USING INDEX PCTFREE 10 INITRANS 20 MAXTRANS 255 
-  TABLESPACE "DATA"  ENABLE;
---------------------------------------------------------
---  Constraints for Table VEHICULO
---------------------------------------------------------
-
-  ALTER TABLE "LUBRICAR"."VEHICULO" MODIFY ("PLACA" NOT NULL ENABLE);
-  ALTER TABLE "LUBRICAR"."VEHICULO" MODIFY ("MARCA" NOT NULL ENABLE);
-  ALTER TABLE "LUBRICAR"."VEHICULO" MODIFY ("MODELO" NOT NULL ENABLE);
-  ALTER TABLE "LUBRICAR"."VEHICULO" ADD CONSTRAINT "PK_VEHICULO" PRIMARY KEY ("ID_VEHICULO")
-  USING INDEX PCTFREE 10 INITRANS 20 MAXTRANS 255 
-  TABLESPACE "DATA"  ENABLE;
-  ALTER TABLE "LUBRICAR"."VEHICULO" ADD CONSTRAINT "UQ_VEHICULO_PLACA" UNIQUE ("PLACA")
   USING INDEX PCTFREE 10 INITRANS 20 MAXTRANS 255 
   TABLESPACE "DATA"  ENABLE;
 --------------------------------------------------------
