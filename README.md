@@ -9,3 +9,9 @@ Se realizó la carga de 1.000 registros ficticios distribuidos entre las 12 tabl
 Finalmente, se ejecutaron consultas de verificación que confirmaron la existencia de 12 claves primarias, 13 claves foráneas y 5 restricciones de unicidad, todas habilitadas. También se comprobaron los permisos de ambos usuarios mediante pruebas de operaciones permitidas y denegadas.
 
 Los resultados permitieron verificar el funcionamiento de la estructura relacional, la carga de información y los controles de acceso implementados en Oracle.
+
+
+Contraseñas:
+LUBRICAR: Proj2026Lubr
+LUBRICAR_OPERADOR: NwPassword2026
+LUBRICAR_CONSULTA: NwPsswords2026
